@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="MainWindow.xaml.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="App.xaml" />
+    <Page Remove="MainWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FsharpWpfTemplate.ViewModels\FsharpWpfTemplate.ViewModels.fsproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="App.xaml" />
+    <Resource Include="MainWindow.xaml" />
+  </ItemGroup>
+  
+</Project>
